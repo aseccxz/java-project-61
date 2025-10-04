@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 public class CalcGame {
     public static void showGameRules(int gameCount) {
-        if (gameCount != 0) {
+        if (gameCount == 0) {
             System.out.println("What is the result of the expression?");
         }
     }

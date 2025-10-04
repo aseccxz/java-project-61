@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 public class EvenGame {
     public static void showGameRules(int gameCount) {
-        if (gameCount != 0) {
+        if (gameCount == 0) {
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         }
     }

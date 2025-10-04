@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 public class GCDGame {
     public static void showGameRules(int gameCount) {
-        if (gameCount != 0) {
+        if (gameCount == 0) {
             System.out.println("Find the greatest common divisor of given numbers.");
         }
     }

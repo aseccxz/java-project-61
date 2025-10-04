@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
 import hexlet.code.games.GCDGame;
+import hexlet.code.games.ProgressionGame;
 
 import java.util.Scanner;
 
@@ -26,6 +27,11 @@ public class Engine {
                 case 4:
                     GCDGame.showGameRules(gameCount);
                     solution = GCDGame.getSolution();
+                    break;
+                case 5:
+                    ProgressionGame.showGameRules(gameCount);
+                    solution = ProgressionGame.getSolution();
+                    break;
             }
             playerAnswer = input.nextLine();
             if (solution.equals(playerAnswer)) {
