@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.CalcGame;
-import hexlet.code.games.EvenGame;
-import hexlet.code.games.GCDGame;
-import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -32,6 +29,9 @@ public class Engine {
                     ProgressionGame.showGameRules(gameCount);
                     solution = ProgressionGame.getSolution();
                     break;
+                case 6:
+                    PrimeGame.showGameRules(gameCount);
+                    solution = PrimeGame.getSolution();
             }
             playerAnswer = input.nextLine();
             if (solution.equals(playerAnswer)) {
