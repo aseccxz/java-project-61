@@ -7,7 +7,7 @@ public class Cli {
 
     public static void greeting() {
         System.out.println("Welcome to the Brain Games!");
-        if(name == null){
+        if (name == null) {
             System.out.print("May I have your name? ");
             Scanner input = new Scanner(System.in);
             name = input.nextLine();
