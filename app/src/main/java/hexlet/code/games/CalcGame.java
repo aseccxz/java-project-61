@@ -1,15 +1,17 @@
 package hexlet.code.games;
 
 public class CalcGame {
+    static final int MAX_NUMBER_VALUE = 100;
+    static final int MAX_INDEX_VALUE = 100;
     public static void showGameRules(int gameCount) {
         if (gameCount == 0) {
             System.out.println("What is the result of the expression?");
         }
     }
     public static String getSolution() {
-        int firstNumber = (int) (Math.random() * 20.0);
-        int secondNumber = (int) (Math.random() * 20.0);
-        int operatorIndex = (int) (Math.random() * 3.0);
+        int firstNumber = (int) (Math.random() * MAX_NUMBER_VALUE);
+        int secondNumber = (int) (Math.random() * MAX_NUMBER_VALUE);
+        int operatorIndex = (int) (Math.random() * MAX_INDEX_VALUE);
         char[] operator = {'+', '-', '*'};
         int solution = 0;
         System.out.println("Question: " + firstNumber + " " + operator[operatorIndex] + " " + secondNumber);

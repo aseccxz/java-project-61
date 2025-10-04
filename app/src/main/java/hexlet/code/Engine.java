@@ -1,37 +1,48 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
-
+import hexlet.code.games.CalcGame;
+import hexlet.code.games.EvenGame;
+import hexlet.code.games.GCDGame;
+import hexlet.code.games.PrimeGame;
+import hexlet.code.games.ProgressionGame;
 import java.util.Scanner;
 
 public class Engine {
-    public static void gameRun(int gameNum) {
+    static final int NUMBER_OF_GAMES = 3;
+
+    public static void gameRun(String gameNum) {
         Cli.greeting();
         int gameCount = 0;
         String solution = "";
         String playerAnswer;
         Scanner input = new Scanner(System.in);
-        while (gameCount < 3) {
+        while (gameCount < NUMBER_OF_GAMES) {
+            if (gameNum.equals("1")) {
+                break;
+            }
             switch (gameNum) {
-                case 2:
+                case "2":
                     EvenGame.showGameRules(gameCount);
                     solution = EvenGame.getSolution();
                     break;
-                case 3:
+                case "3":
                     CalcGame.showGameRules(gameCount);
                     solution = CalcGame.getSolution();
                     break;
-                case 4:
+                case "4":
                     GCDGame.showGameRules(gameCount);
                     solution = GCDGame.getSolution();
                     break;
-                case 5:
+                case "5":
                     ProgressionGame.showGameRules(gameCount);
                     solution = ProgressionGame.getSolution();
                     break;
-                case 6:
+                case "6":
                     PrimeGame.showGameRules(gameCount);
                     solution = PrimeGame.getSolution();
+                    break;
+                default:
+                    System.out.println("Unexpected input");
             }
             playerAnswer = input.nextLine();
             if (solution.equals(playerAnswer)) {
@@ -39,12 +50,12 @@ public class Engine {
                 gameCount++;
             } else {
                 System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + solution + "'.");
-                System.out.println("Let's try again, " + Cli.name + "!");
+                System.out.println("Let's try again, " + Cli.getName() + "!");
                 break;
             }
         }
-        if (gameCount == 3) {
-            System.out.println("Congratulations, " + Cli.name + "!");
+        if (gameCount == NUMBER_OF_GAMES) {
+            System.out.println("Congratulations, " + Cli.getName() + "!");
         }
     }
 }

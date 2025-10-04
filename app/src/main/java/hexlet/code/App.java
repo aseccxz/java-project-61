@@ -13,13 +13,11 @@ public class App {
                 5 - Progression
                 6 - Prime
                 0 - Exit""");
-        int gameChoice;
+        String gameChoice;
         Scanner input = new Scanner(System.in);
-        gameChoice = input.nextInt();
-        System.out.println("Your choice: " + gameChoice);
-        if (gameChoice == 1) {
-            Cli.greeting();
-        } else {
+        gameChoice = input.nextLine();
+        if (!gameChoice.equals("0")) {
+            System.out.println("Your choice: " + gameChoice);
             Engine.gameRun(gameChoice);
         }
     }
