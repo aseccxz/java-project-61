@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 public class PrimeGame {
     static final int MAX_NUMBER_VALUE = 100;
-    static final int MIN_INDEX_TO_START = 100;
+    static final int MIN_INDEX_TO_START = 3;
 
     public static void showGameRules(int gameCount) {
         if (gameCount == 0) {
