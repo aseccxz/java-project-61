@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 public class CalcGame {
     static final int MAX_NUMBER_VALUE = 100;
-    static final int MAX_INDEX_VALUE = 100;
+    static final int MAX_INDEX_VALUE = 3;
     public static void showGameRules(int gameCount) {
         if (gameCount == 0) {
             System.out.println("What is the result of the expression?");
