@@ -1,5 +1,11 @@
 package hexlet.code;
 
+import hexlet.code.games.CalcGame;
+import hexlet.code.games.EvenGame;
+import hexlet.code.games.GCDGame;
+import hexlet.code.games.PrimeGame;
+import hexlet.code.games.ProgressionGame;
+
 import java.util.Scanner;
 
 public class App {
@@ -16,9 +22,27 @@ public class App {
         String gameChoice;
         Scanner input = new Scanner(System.in);
         gameChoice = input.nextLine();
-        if (!gameChoice.equals("0")) {
-            System.out.println("Your choice: " + gameChoice);
-            Engine.gameRun(gameChoice);
+        switch (gameChoice) {
+            case "1":
+                Cli.greeting();
+                break;
+            case "2":
+                EvenGame.evenGame();
+                break;
+            case "3":
+                CalcGame.calcGame();
+                break;
+            case "4":
+                GCDGame.gcdGame();
+                break;
+            case "5":
+                ProgressionGame.progressionGame();
+                break;
+            case "6":
+                PrimeGame.primeGame();
+                break;
+            default:
+                System.out.println("Unexpected input");
         }
     }
 }
