@@ -14,7 +14,7 @@ public class Engine {
         String userName = input.next();
         System.out.println("Hello, " + userName + "!");
         System.out.println(gameRules);
-        for (String [] questionAndAnswer : questionsAndAnswers) {
+        for (String[] questionAndAnswer : questionsAndAnswers) {
             String question = questionAndAnswer[0];
             String answer = questionAndAnswer[1];
             System.out.println(question);

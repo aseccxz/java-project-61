@@ -6,9 +6,10 @@ public class PrimeGame {
     static final int MAX_NUMBER_VALUE = 100;
     static final int COLUMN_INDEX = 3;
     static final int ROW_INDEX = 2;
+    static final int MIN_INDEX_TO_START = 3;
 
     public static boolean isPrime(int number) {
-        int minIndex = 3;
+        //int minIndex = 3;
         if (number < 2) {
             return false;
         }
@@ -18,7 +19,7 @@ public class PrimeGame {
         if (number % 2 == 0) {
             return false;
         }
-        for (int j = minIndex; j * j <= number; j += 2) {
+        for (int j = MIN_INDEX_TO_START; j * j <= number; j += 2) {
             if (number % j == 0) {
                 return false;
             }
