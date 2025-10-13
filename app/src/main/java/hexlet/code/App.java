@@ -42,7 +42,7 @@ public class App {
                 PrimeGame.primeGame();
                 break;
             default:
-                System.out.println("Unexpected input");
+                System.out.println("Unknown user choice " + gameChoice);
         }
     }
 }
