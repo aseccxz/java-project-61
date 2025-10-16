@@ -1,15 +1,15 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.utils.Utils;
 
 public class PrimeGame {
     static final int MAX_NUMBER_VALUE = 100;
     static final int COLUMN_INDEX = 3;
     static final int ROW_INDEX = 2;
-    static final int MIN_INDEX_TO_START = 3;
 
     public static boolean isPrime(int number) {
-        //int minIndex = 3;
+        final int minIndex = 3;
         if (number < 2) {
             return false;
         }
@@ -19,7 +19,7 @@ public class PrimeGame {
         if (number % 2 == 0) {
             return false;
         }
-        for (int j = MIN_INDEX_TO_START; j * j <= number; j += 2) {
+        for (int j = minIndex; j * j <= number; j += 2) {
             if (number % j == 0) {
                 return false;
             }
@@ -31,8 +31,8 @@ public class PrimeGame {
         String gameRules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] questionsAndAnswers = new String[COLUMN_INDEX][ROW_INDEX];
         for (int i = 0; i < Engine.NUMBER_OF_GAMES; i++) {
-            int guessedNumber = (int) (Math.random() * MAX_NUMBER_VALUE);
-            questionsAndAnswers[i][0] = "Question: " + guessedNumber;
+            int guessedNumber = Utils.generateNumber(0, MAX_NUMBER_VALUE);
+            questionsAndAnswers[i][0] = Integer.toString(guessedNumber);
             questionsAndAnswers[i][1] = isPrime(guessedNumber) ? "yes" : "no";
         }
         Engine.gameRun(gameRules, questionsAndAnswers);
