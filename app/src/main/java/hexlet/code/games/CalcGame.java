@@ -5,7 +5,7 @@ import hexlet.code.utils.Utils;
 
 public class CalcGame {
     static final int MAX_NUMBER_VALUE = 100;
-    static final int MAX_INDEX_VALUE = 3;
+    static final int MAX_INDEX_VALUE = 2;
     static final int COLUMN_INDEX = 3;
     static final int ROW_INDEX = 2;
 
