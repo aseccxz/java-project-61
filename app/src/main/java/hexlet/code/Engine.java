@@ -16,7 +16,7 @@ public class Engine {
         for (String[] questionAndAnswer : questionsAndAnswers) {
             String question = questionAndAnswer[0];
             String answer = questionAndAnswer[1];
-            System.out.println("Question " + question);
+            System.out.println("Question: " + question);
             playerAnswer = input.next();
             if (answer.equals(playerAnswer)) {
                 System.out.println("Correct!");
