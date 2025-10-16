@@ -27,7 +27,7 @@ public class ProgressionGame {
             int startNumber = Utils.generateNumber(0, MAX_NUMBER_VALUE);
             int step = Utils.generateNumber(MIN_STEP_VALUE, MAX_STEP_VALUE);
             String[] numbers = getProgression(MAX_NUMBERS_LENGTH, startNumber, step);
-            int hiddenNumberIndex = Utils.generateNumber(0, numbers.length);
+            int hiddenNumberIndex = Utils.generateNumber(0, numbers.length - 1);
             questionsAndAnswers[i][0] = String.join(" ", numbers).replace(numbers[hiddenNumberIndex], "..");
             questionsAndAnswers[i][1] = numbers[hiddenNumberIndex];
         }
